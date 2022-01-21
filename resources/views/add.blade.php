@@ -33,7 +33,7 @@
                         <select class="form-group">
                             <option disabled selected>Already Existing Genres (id in ascending order)</option>
                             @foreach($dev as $devs)
-                                <option disabled value="{{$devs->devid}}" >{{$devs->dev}}</option>
+                                <option disabled value="{{$devs->devid}}" >{{$devs->dev_id}}, {{$devs->dev}}</option>
                             @endforeach
                         </select>
                         <!-- GENRE -->
@@ -45,7 +45,7 @@
                         <select class="form-group">
                             <option disabled selected>Already Existing Genres (id in ascending order)</option>
                             @foreach($genre as $genres)
-                                <option disabled value="{{$genres->genid}}" >{{$genres->genrename}}</option>
+                                <option disabled value="{{$genres->genid}}" >{{$genres->genre_id}}, {{$genres->genrename}}</option>
                             @endforeach
                         </select>
 
