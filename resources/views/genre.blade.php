@@ -24,7 +24,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach(auth()->user()->genres as $genre)
+                    @foreach($genres as $genre)
                         <tr class="border-b hover:bg-orange-100">
                             <td class="p-3 px-5">
                                 {{$genre->genrename}}

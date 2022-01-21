@@ -25,7 +25,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach(auth()->user()->developers as $developer)
+                    @foreach($developers as $developer)
                         <tr class="border-b hover:bg-orange-100">
                             <td class="p-3 px-5">
                                 {{$developer->dev}}

@@ -17,7 +17,7 @@ class CreateDeveloperTable extends Migration
             $table->bigIncrements('dev_id');
             $table->string('dev');
             $table->date('foundyear');
-            $table->integer('user_id')->unsigned()->index();
+            /*$table->integer('user_id')->unsigned()->index();*/
             $table->timestamps();
         });
     }

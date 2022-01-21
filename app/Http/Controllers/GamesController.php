@@ -16,6 +16,24 @@ class GamesController extends Controller
 
         return view('dashboard', compact('games'));
     }
+    public function userIndex()
+    {
+
+        $games = Game::all();
+
+        return view('userpanel', compact('games'));
+    }
+
+    /*public function search(Request $request)
+    {
+        $search = $request->get('search');
+        $games = Game::with('genre')->select('genrename.*')->with('developer')->select('dev.*')
+            ->join()
+            ->join()
+            ->where()
+            ->orWhere()
+            ->orWhere();
+    }*/
     public function add()
     {
         $genre = Genre::all();
@@ -39,7 +57,6 @@ class GamesController extends Controller
         $game->relyear = $request->relyear;
         $game->genre_id = $request->genre_id;
         $game->dev_id = $request->dev_id;
-        $game->user_id = auth()->user()->id;
         $game->save();
         return redirect('/dashboard');
     }
@@ -48,13 +65,9 @@ class GamesController extends Controller
     {
 
 
-        if (auth()->user()->id == $game->user_id)
-        {
+
             return view('edit', compact('game'));
-        }
-        else {
-            return redirect('/dashboard');
-        }
+
     }
 
     public function update(Request $request, Game $game)

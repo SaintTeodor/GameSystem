@@ -27,7 +27,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach(auth()->user()->games as $game)
+                    @foreach($games as $game)
                         <tr class="border-b hover:bg-orange-100">
                             <td class="p-3 px-5">
                                <h5> {{$game->description}}  </h5>

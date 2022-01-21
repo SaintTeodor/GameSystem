@@ -19,7 +19,6 @@ class CreateGamesTable extends Migration
             $table->unsignedBigInteger('genre_id');
             $table->unsignedBigInteger('dev_id');
             $table->date('relyear');
-            $table->integer('user_id')->unsigned()->index();
             $table->timestamps();
 
             $table->foreign('genre_id')->references('genre_id')->on('genres');

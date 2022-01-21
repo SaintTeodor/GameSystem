@@ -11,7 +11,7 @@ class DevelopersController extends Controller
 
     public function index()
     {
-        $developers = auth()->user()->developers();
+        $developers = Developer::all();
         return view('devboard', compact('developers'));
     }
     public function add()
@@ -30,7 +30,6 @@ class DevelopersController extends Controller
         $developer = new Developer();
         $developer->dev = $request->dev;
         $developer->foundyear = $request->foundyear;
-        $developer->user_id = auth()->user()->id;
         $developer->save();
         return redirect('/dev');
     }
@@ -38,13 +37,9 @@ class DevelopersController extends Controller
     public function edit(Developer $developer)
     {
 
-        if (auth()->user()->id == $developer->user_id)
-        {
+
             return view('editdev', compact('developer'));
-        }
-        else {
-            return redirect('/dev');
-        }
+
     }
 
     public function update(Request $request, Developer $developer)

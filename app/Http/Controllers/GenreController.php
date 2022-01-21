@@ -9,7 +9,7 @@ class GenreController extends Controller
 {
     public function index()
     {
-        $genres = auth()->user()->genres();
+        $genres = Genre::all();
         return view('genre', compact('genres'));
     }
     public function add()
@@ -24,7 +24,6 @@ class GenreController extends Controller
         ]);
         $genre = new Genre();
         $genre->genrename = $request->genrename;
-        $genre->user_id = auth()->user()->id;
         $genre->save();
         return redirect('/genre');
     }
@@ -32,13 +31,9 @@ class GenreController extends Controller
     public function edit(Genre $genre)
     {
 
-        if (auth()->user()->id == $genre->user_id)
-        {
+
             return view('editgenre', compact('genre'));
-        }
-        else {
-            return redirect('/genre');
-        }
+
     }
 
     public function update(Request $request, Genre $genre)
