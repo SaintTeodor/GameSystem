@@ -16,24 +16,19 @@ class GamesController extends Controller
 
         return view('dashboard', compact('games'));
     }
-    public function userIndex()
-    {
 
-        $games = Game::all();
-
-        return view('userpanel', compact('games'));
-    }
-
-    /*public function search(Request $request)
+    public function search(Request $request)
     {
         $search = $request->get('search');
-        $games = Game::with('genre')->select('genrename.*')->with('developer')->select('dev.*')
-            ->join()
-            ->join()
-            ->where()
-            ->orWhere()
-            ->orWhere();
-    }*/
+        $games = Game::with('developer', 'genre')->select('games.*')
+            ->join('developers', 'games.dev_id', '=', 'developers.dev_id')
+            ->join('genres', 'games.genre_id', '=', 'genres.genre_id')
+            ->where('games.description', 'LIKE',  '%' . $search . '%')
+            ->orWhere('developers.dev', 'LIKE',  '%' . $search . '%')
+            ->orWhere('genres.genrename', 'LIKE',  '%' . $search . '%')
+            ->orWhere('games.relyear', 'LIKE', '%' . $search . '%')->get();
+        return view('dashboard', compact('games'));
+    }
     public function add()
     {
         $genre = Genre::all();

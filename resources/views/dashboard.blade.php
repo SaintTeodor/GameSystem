@@ -23,7 +23,17 @@
                         <th class="text-left p-3 px-5">Developer</th>
                         <th class="text-left p-3 px-5">Genre</th>
                         <th class="text-left p-3 px-5">Actions</th>
-                        <th></th>
+                        <th>
+                            <form action="/search" method="get">
+                             {{csrf_field()}}
+                                <div class="input-group">
+                                    <input type="search" name="search" class="form-control">
+                                    <span class="input-group-prepend">
+                                        <button type="submit" class="rounded border border-blue-400 bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded">Search</button>
+                                    </span>
+                                </div>
+                            </form>
+                        </th>
                     </tr>
                     </thead>
                     <tbody>

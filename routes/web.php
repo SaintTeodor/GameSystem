@@ -22,30 +22,26 @@ Route::get('/', function () {
 
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function(){
-    Route::get('/dashboard',[GamesController::class, 'index'])->name('dashboard');
-    Route::get('/genre',[GenreController::class, 'index'])->name('genre');
-    Route::get('/dev',[DevelopersController::class, 'index'])->name('dev');
 /* Image Upload */
     Route::get('image-upload', [ ImageUploadController::class, 'imageUpload' ])->name('image.upload');
     Route::post('image-upload', [ ImageUploadController::class, 'imageUploadPost' ])->name('image.upload.post');
-
-
 /* Games */
+    Route::get('/dashboard',[GamesController::class, 'index'])->name('dashboard');
     Route::get('/game',[GamesController::class, 'add']);
     Route::post('/game',[GamesController::class, 'create']);
-
+    Route::get('/search',[GamesController::class, 'search']);
     Route::get('/game/{game}', [GamesController::class, 'edit']);
     Route::post('/game/{game}', [GamesController::class, 'update']);
 /* Developer */
+    Route::get('/dev',[DevelopersController::class, 'index'])->name('dev');
     Route::get('/adddev',[DevelopersController::class, 'add']);
     Route::post('/adddev',[DevelopersController::class, 'create']);
-
     Route::get('/adddev/{developer}', [DevelopersController::class, 'edit']);
     Route::post('/adddev/{developer}', [DevelopersController::class, 'update']);
 /* Genre */
+    Route::get('/genre',[GenreController::class, 'index'])->name('genre');
     Route::get('/addgenre',[GenreController::class, 'add']);
     Route::post('/addgenre',[GenreController::class, 'create']);
-
     Route::get('/addgenre/{genre}', [GenreController::class, 'edit']);
     Route::post('/addgenre/{genre}', [GenreController::class, 'update']);
 
@@ -53,6 +49,4 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
 });
 
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('games', 'GamesController');
