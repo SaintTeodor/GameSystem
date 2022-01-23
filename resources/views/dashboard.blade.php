@@ -1,5 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
+
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Games') }}
         </h2>
@@ -14,6 +15,17 @@
                     <div class="flex-auto text-right mt-2">
                         <a href="/game" class="bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded">Add new Game</a>
                     </div>
+                    <div style="padding-left: 650px">
+                        <form action="/search" method="get">
+                            {{csrf_field()}}
+                            <div class="input-group">
+                                <input type="search" name="search" class="form-control">
+                                <span class="input-group-prepend">
+                                        <button type="submit" class="rounded border border-blue-400 bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded">Search</button>
+                                    </span>
+                            </div>
+                        </form>
+                    </div>
                 </div>
                 <table class="w-full text-md rounded mb-4">
                     <thead>
@@ -23,17 +35,6 @@
                         <th class="text-left p-3 px-5">Developer</th>
                         <th class="text-left p-3 px-5">Genre</th>
                         <th class="text-left p-3 px-5">Actions</th>
-                        <th>
-                            <form action="/search" method="get">
-                             {{csrf_field()}}
-                                <div class="input-group">
-                                    <input type="search" name="search" class="form-control">
-                                    <span class="input-group-prepend">
-                                        <button type="submit" class="rounded border border-blue-400 bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded">Search</button>
-                                    </span>
-                                </div>
-                            </form>
-                        </th>
                     </tr>
                     </thead>
                     <tbody>
