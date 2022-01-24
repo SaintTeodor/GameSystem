@@ -14,19 +14,19 @@
                     <div class="form-group">
                         <!-- GAME NAME -->
                         <h3><strong>Game Name</strong></h3>
-                        <textarea name="description" class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white"  placeholder='Example: StarCraft'></textarea>
+                        <textarea name="description" class="bg-gray-800 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white"  placeholder='Example: StarCraft'></textarea>
                         @if ($errors->has('description'))
                             <span class="text-danger">{{ $errors->first('description') }}</span>
                         @endif
                     <!-- RELEASE YEAR -->
                         <h3><strong>Release Year</strong></h3>
-                        <textarea name="relyear" class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white"  placeholder='Example: Year-Month-Day/1998-08-22'></textarea>
+                        <textarea name="relyear" class="bg-gray-800 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white"  placeholder='Example: Year-Month-Day/1998-08-22'></textarea>
                         @if ($errors->has('relyear'))
                             <span class="text-danger">{{ $errors->first('relyear') }}</span>
                         @endif
                     <!-- DEVELOPER -->
                         <h3><strong>Developer Name</strong></h3>
-                        <textarea name="dev_id" class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white"  placeholder='Example: 1 (for Blizzard Entertainment)'></textarea>
+                        <textarea name="dev_id" class="bg-gray-8000 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white"  placeholder='Example: 1 (for Blizzard Entertainment)'></textarea>
                         @if ($errors->has('dev_id'))
                             <span class="text-danger">{{ $errors->first('dev_id') }}</span>
                         @endif
@@ -38,7 +38,7 @@
                         </select>
                         <!-- GENRE -->
                         <h3><strong>Genre Name</strong></h3>
-                        <textarea name="genre_id" class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white"  placeholder='Example: 1 (for Horror)'></textarea>
+                        <textarea name="genre_id" class="bg-gray-800 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white"  placeholder='Example: 1 (for Horror)'></textarea>
                         @if ($errors->has('genre_id'))
                             <span class="text-danger">{{ $errors->first('genre_id') }}</span>
                         @endif

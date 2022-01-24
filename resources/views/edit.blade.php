@@ -13,22 +13,22 @@
 
                     <div class="form-group">
                         <h3>Game Name</h3>
-                        <textarea name="description" class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white">{{$game->description }}</textarea>
+                        <textarea name="description" class="bg-gray-800 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white">{{$game->description }}</textarea>
                         @if ($errors->has('description'))
                             <span class="text-danger">{{ $errors->first('description') }}</span>
                         @endif
                         <h3>Release year</h3>
-                        <textarea name="relyear" class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white">{{$game->relyear }}</textarea>
+                        <textarea name="relyear" class="bg-gray-800 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white">{{$game->relyear }}</textarea>
                         @if ($errors->has('relyear'))
                             <span class="text-danger">{{ $errors->first('relyear') }}</span>
                         @endif
                         <h3>Genre Name(id)</h3>
-                        <textarea name="genre_id" class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white" >{{$game->genre->genre_id}}</textarea>
+                        <textarea name="genre_id" class="bg-gray-800 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white" >{{$game->genre->genre_id}}</textarea>
                         @if ($errors->has('genre_id'))
                             <span class="text-danger">{{ $errors->first('genre_id') }}</span>
                         @endif
                         <h3>Developer Name(id)</h3>
-                        <textarea name="dev_id" class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white" >{{$game->developer->dev_id}}</textarea>
+                        <textarea name="dev_id" class="bg-gray-800 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white" >{{$game->developer->dev_id}}</textarea>
                         @if ($errors->has('dev_id'))
                             <span class="text-danger">{{ $errors->first('dev_id') }}</span>
                         @endif

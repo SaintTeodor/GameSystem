@@ -12,7 +12,7 @@
                 <form method="POST" action="/addgenre/{{ $genre->genre_id }}">
 
                     <div class="form-group">
-                        <textarea name="genrename" class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white">{{$genre->genrename }}</textarea>
+                        <textarea name="genrename" class="bg-gray-800 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white">{{$genre->genrename }}</textarea>
                         @if ($errors->has('genrename'))
                             <span class="text-danger">{{ $errors->first('genrename') }}</span>
                         @endif

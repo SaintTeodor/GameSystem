@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GamesController;
 use App\Http\Controllers\DevelopersController;
 use App\Http\Controllers\GenreController;
+use App\Http\Controllers\ImageUploadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
 /* Image Upload */
     Route::get('image-upload', [ ImageUploadController::class, 'imageUpload' ])->name('image.upload');
     Route::post('image-upload', [ ImageUploadController::class, 'imageUploadPost' ])->name('image.upload.post');
+    Route::get('imagelist', [ImageUploadController::class, 'index'])->name('image');
+    Route::post('/image/{img}', [ImageUploadController::class, 'delete']);
 /* Games */
     Route::get('/dashboard',[GamesController::class, 'index'])->name('dashboard');
     Route::get('/game',[GamesController::class, 'add']);

@@ -5,10 +5,10 @@
         </h2>
     </x-slot>
 
-    <div class="container">
+    <div class="container" style="background-color:white;">
 
         <div class="panel panel-primary" style="display: flex; justify-content: center">
-            <div class="panel-heading"><h2><strong>Upload your screenshot:</strong></h2></div>
+            <div class="panel-heading"><h2><strong>Upload your screenshot: </strong></h2></div>
             <div class="panel-body">
 
                 @if ($message = Session::get('success'))
