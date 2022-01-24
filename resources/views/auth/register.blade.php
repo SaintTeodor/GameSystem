@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+            <img src="https://www.pngall.com/wp-content/uploads/5/Vector-Game-Controller-Transparent.png" height="60" width="60">
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />

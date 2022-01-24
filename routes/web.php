@@ -5,6 +5,7 @@ use App\Http\Controllers\GamesController;
 use App\Http\Controllers\DevelopersController;
 use App\Http\Controllers\GenreController;
 use App\Http\Controllers\ImageUploadController;
+use App\Http\Controllers\HomePageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,7 @@ use App\Http\Controllers\ImageUploadController;
 Route::get('/', function () {
     return view('welcome');
 });
+
 
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function(){
@@ -47,7 +49,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     Route::post('/addgenre',[GenreController::class, 'create']);
     Route::get('/addgenre/{genre}', [GenreController::class, 'edit']);
     Route::post('/addgenre/{genre}', [GenreController::class, 'update']);
-
+/* Home */
+    Route::get('/home',[HomePageController::class, 'index'])->name('home');
+    Route::get('/searchhome',[HomePageController::class, 'search']);
 
 });
 

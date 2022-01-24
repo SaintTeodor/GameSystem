@@ -5,7 +5,7 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('home') }}">
                         <img src="https://www.pngall.com/wp-content/uploads/5/Vector-Game-Controller-Transparent.png" height="60" width="60">
                     </a>
                 </div>

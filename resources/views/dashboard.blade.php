@@ -15,7 +15,7 @@
                     <div class="flex-auto text-right mt-2">
                         <a href="/game" class="bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded">Add new Game</a>
                     </div>
-                    <div style="padding-left: 650px">
+                    <div style="padding-left: 650px; padding-top: 3px">
                         <form action="/search" method="get">
                             {{csrf_field()}}
                             <div class="input-group">
