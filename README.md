@@ -3,12 +3,12 @@
 
 
 ## About the Game System
-<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+<hr>
 
 The "Game System" project is created using Laravel 8.0. It serves as a system that stores Videogame related information such as, the name of the video game, the date it was released on, the developers behind the game, the date the development studio was founded on and the genre of the game. The system can also store images, it can be screenshots, fan art or something related to the games. You can also search for specific information you need, by searching for a specific game name, release date, development studio or genre. <strong>Routing</strong>: In the web.php file, located at \routes\, we configure the routes. For every route we add a "post" or "get" (Example: Route::get('/addgenre',[GenreController::class, 'add']);\Route::post('/addgenre',[GenreController::class, 'create']);), every function we use requires a "get" or "post".
 
 ## How was it made ?
-<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+<hr>
 
 
 First we create the project using Laravel, by typing "laravel new (project name)" in the CMD. Once that is done we end up with a fresh project, then we configure the DataBase. We configure the DataBase in the .env file. After we are done with the DataBase configuration we create authentication, by typing "laravel new (given project name) --jet" in the CMD (or by using the Terminal in PHP Storm). After we are done we run "nmp install && nmp run dev" to build our assets.
@@ -41,6 +41,6 @@ Once every controller is created, we are ready to add some views. Views are crea
 
 
 ## License
-<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+<hr>
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
