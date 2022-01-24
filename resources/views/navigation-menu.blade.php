@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <x-jet-application-mark class="block h-9 w-auto" />
+                        <h1><strong>TEODOR</strong></h1>
                     </a>
                 </div>
 
@@ -24,6 +24,11 @@
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('genre') }}" :active="request()->routeIs('genre')">
                         {{ __('Genres') }}
+                    </x-jet-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('image') }}" :active="request()->routeIs('image')">
+                        {{ __('Screenshots') }}
                     </x-jet-nav-link>
                 </div>
             </div>
