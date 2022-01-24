@@ -27,15 +27,19 @@ After the models are done, we start with the controllers. Controllers are made b
 ## a) Games controller
 <hr>
 The games controller has an index function, which calls all of the information from the Games table and returns the "dashboard view" which displays all of the games. It also has a search function, which requests the data from the games table, developer table and genre table, which joins them afterwards and gives you the ability to search keywords with the "where/orWhere" functions. The add function, which contains two variables that call the genre and developer tables so we can add game information and give them specific genres and development studios. The create function, which contains validation for the name, release date, genre and dev ids, it also has a variable which inserts into the games table by requesting a name, date and 2 ids. An edit function that edits the information added in the "create" function. A update function which gives us the ability to delete columns and the ability to edit columns which contains the validation in the "create" function.
+
 ## b) Developer controller
 <hr>
 The developer controller contains the index function, create function, add function, edit function and update function that are created exactly like the Games controller controller functions.
+
 ## b) Genre controller
 <hr>
 The genre controller contains the index function, create function, add function, edit function and update function that are created exactly like the Games controller controller functions.
+
 ## c) Image Upload Controller
 <hr>
 The image upload controller contains 4 functions. An imageUpload function, which returns the view where we upload images. An image post function that validates that the image is a specific type of image and is within size bounds, it also creates a new column in the images table. An index function that returns the image list page where all of the added images are displayed. And finally an update function which lets you delete data from the DataBase.
+
 ## d) Home controller
 <hr>
 The home controller contains 2 functions, an index and search function. The index function returns the home page and the search function is created the same way we created it in the Games controller.
